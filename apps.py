@@ -30,5 +30,4 @@ app.layout = html.Div(
         ),
     ]
 )
-if __name__ == "__main__":
-    server=app.server
+server=app.server
