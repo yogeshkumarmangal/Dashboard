@@ -7,6 +7,7 @@ data=pd.read_csv("Dashboards.csv")
 data["Date"] = pd.to_datetime(data["Date"], format="%Y-%m-%d")
 data.sort_values("Date", inplace=True)
 app = dash.Dash(__name__)
+server=app.server
 app.layout = html.Div(
     children=[
         html.H1(children="Acculi Lbas Pvt.Ltd.",),
@@ -30,4 +31,3 @@ app.layout = html.Div(
         ),
     ]
 )
-server=app.server
