@@ -11,7 +11,7 @@ server=app.server
 app.layout = html.Div(
     children=[
         html.H1(children="Acculi Lbas Pvt.Ltd.",),
-        html.H2(children="March Data Analytics",),
+        html.H2(children="Lyfas",),
         html.P(
             children=""
             ""
@@ -26,7 +26,7 @@ app.layout = html.Div(
                         "type": "bar",
                     },
                 ],
-                "layout": {"title": "Total Test in March"},
+                "layout": {"title": "Test Number"},
             },
         ),
         dcc.Graph(
@@ -38,7 +38,7 @@ app.layout = html.Div(
                         "type": "bar",
                     },
                 ],
-                "layout": {"title": "Total Test in March"},
+                "layout": {"title": "Critical Patient Number"},
             },
         ),
     ]
