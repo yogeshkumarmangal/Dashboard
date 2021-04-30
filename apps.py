@@ -20,27 +20,13 @@ app.layout = html.Div(
         dcc.Graph(
             figure={
                 "data": [
-                    {
-                        "x": data["Date"],
-                        "y": data["Count"],
-                        "type": "bar",
-                    },
+                    { "x": data["Date"],"y": data["Count"],'type': 'bar', 'name': 'Total Test'},
+                    { "x": data["Date"],"y": data["Critical"],'type': 'bar', 'name': 'Critical Patient'},
                 ],
-                "layout": {"title": "Test Number"},
+                "layout": {" Data Analytics "},
             },
-        ),
-        dcc.Graph(
-            figure={
-                "data": [
-                    {
-                        "x": data["Date"],
-                        "y": data["Critical"],
-                        "type": "bar",
-                    },
-                ],
-                "layout": {"title": "Critical Patient Number"},
-            },
-        ),
+        ),  
+    
     ]
 )
 
