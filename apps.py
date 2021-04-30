@@ -23,7 +23,7 @@ app.layout = html.Div(
                     { "x": data["Date"],"y": data["Count"],'type': 'bar', 'name': 'Total Test'},
                     { "x": data["Date"],"y": data["Critical"],'type': 'bar', 'name': 'Critical Patient'},
                 ],
-                "layout": {" Data Analytics "},
+                "layout": {"title":" Data Analytics "},
             },
         ),  
     
