@@ -26,8 +26,8 @@ fig.update_layout(barmode='group')
 app.layout = html.Div([
                 # adding a header and a paragraph
                 html.Div([
-                    html.H1("This is my first dashboard"),
-                    html.P("Learning Dash is so interesting!!")
+                    html.H1("Acculi Labs Pvt. Ltd."),
+                    html.P("Lyfas")
                          ], 
                     style = {'padding' : '50px' , 
                              'backgroundColor' : '#3aaab2'}),
