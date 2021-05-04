@@ -9,7 +9,14 @@ import plotly.graph_objs as go
 app = dash.Dash()
 server=app.server
 # Step 2. Import the dataset
-st = pd.read_csv('Dashboards.csv')
+dbx = dropbox.Dropbox("5uSdWA0gd2UAAAAAAAAAAauPVaO_t_nlwRgP3YzwZ8-2HlxYFWRLUrmTAgk4F4b7")
+for entry in dbx.files_list_folder('').entries:
+   aa=entry.name
+   if aa=='Dashboards.csv':
+       bb=entry.id
+       resultresult =dbx.files_get_temporary_link(bb)
+       cc=resultresult.link
+st = pd.read_csv(cc)
 
 # dropdown options
 features = ['Count','Critical']
