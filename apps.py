@@ -73,7 +73,7 @@ def update_charts(start_date, end_date):
     go.Bar(name='Total Test', x=filtered_data['Date'], y=filtered_data['Count']),
     go.Bar(name='Critical', x=filtered_data['Date'], y=filtered_data['Critical'])])
     fig.update_layout(barmode='group')
-    return fig
+    resturn fig
     # updating the plot
   
 # Step 6. Add the server clause
