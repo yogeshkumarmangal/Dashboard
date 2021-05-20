@@ -7,7 +7,8 @@ import pandas as pd
 import plotly.graph_objs as go
 import dropbox
 # Step 1. Launch the application
-app = dash.Dash(__name__)
+app = dash.Dash()
+server=app.server
 # Step 2. Import the dataset
 dbx = dropbox.Dropbox("5uSdWA0gd2UAAAAAAAAAAauPVaO_t_nlwRgP3YzwZ8-2HlxYFWRLUrmTAgk4F4b7")
 for entry in dbx.files_list_folder('').entries:
