@@ -83,8 +83,8 @@ def update_charts(start_date, end_date):
     )
     filtered_data = st.loc[mask, :]
     fig = go.Figure(data=[
-    go.Bar(name='Total Test', x=filtered_data['Date'], y=filtered_data['Count']),
-    go.Bar(name='Critical', x=filtered_data['Date'], y=filtered_data['Critical'])])
+    go.Bar(name='Total Test', x=filtered_data['Date'], y=filtered_data['Count'],text=filtered_data['Count'],textposition='auto'),
+    go.Bar(name='Critical', x=filtered_data['Date'], y=filtered_data['Critical'],text=filtered_data['Critical'],textposition='auto')])
     fig.update_layout(barmode='group')
     return fig
     # updating the plot
