@@ -33,8 +33,8 @@ opts = [{'label' : i, 'value' : i} for i in features]
 st['Date'] = pd.to_datetime(st.Date)
 # Step 3. Create a plotly figure
 fig = go.Figure(data=[
-    go.Bar(name='Total Test', x=st.Date, y=st['Count'],text=y,textposition='auto'),
-    go.Bar(name='Critical', x=st.Date, y=st['Critical'],text=y,textposition='auto')])
+    go.Bar(name='Total Test', x=st.Date, y=st['Count']),
+    go.Bar(name='Critical', x=st.Date, y=st['Critical'])])
 fig.update_layout(barmode='group')
 # Step 4. Create a Dash layout
 app.layout = html.Div([
@@ -83,8 +83,8 @@ def update_charts(start_date, end_date):
     )
     filtered_data = st.loc[mask, :]
     fig = go.Figure(data=[
-    go.Bar(name='Total Test', x=filtered_data['Date'], y=filtered_data['Count'],text=y,textposition='auto'),
-    go.Bar(name='Critical', x=filtered_data['Date'], y=filtered_data['Critical'],text=y,textposition='auto')])
+    go.Bar(name='Total Test', x=filtered_data['Date'], y=filtered_data['Count']),
+    go.Bar(name='Critical', x=filtered_data['Date'], y=filtered_data['Critical'])])
     fig.update_layout(barmode='group')
     return fig
     # updating the plot
